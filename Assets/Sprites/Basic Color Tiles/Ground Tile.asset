@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a562c546e8e410c4d93eb4bcb7b0cae1, type: 3}
+  m_Name: Ground Tile
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  tileName: Ground
+  tileBase: {fileID: 11400000, guid: 329adc3f76a88a04cb8b0d9b579b04ae, type: 2}
+  cost: 5
+  tileSprite: {fileID: 6682738439518977790, guid: 914de4b5dc684da4f9b3d512ae376415, type: 3}

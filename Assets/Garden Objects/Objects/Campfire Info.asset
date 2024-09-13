@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea20a8f46e62f794fbce16ba0ca20705, type: 3}
+  m_Name: Campfire Info
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  objectSprite: {fileID: -2678441480175587147, guid: 8af5996f7bed8ad4082bd43ae733bfbc, type: 3}
+  gardenObjectName: Campfire
+  maxQuantity: 10
+  objectPrefab: {fileID: 2101693273301931600, guid: 71f2cc6c833e9d74f9ab429a539fbd76, type: 3}

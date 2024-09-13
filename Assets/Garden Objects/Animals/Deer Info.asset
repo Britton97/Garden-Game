@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff7f6aa12d3d554aaf45ac3dac8d480, type: 3}
+  m_Name: Deer Info
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  objectSprite: {fileID: -7567519506061594918, guid: 8e154534466f2b4459d2e2fdc2b75a61, type: 3}
+  gardenObjectName: Deer
+  maxQuantity: 4
+  objectPrefab: {fileID: 8510422098830853324, guid: 76ed299bbdccf1c4ba6fbe27ca659ac8, type: 3}
+  spawnChance: 1
+  sellPrice: 25
+  untamedColor: {r: 0, g: 0, b: 0, a: 1}
+  tamedColor: {r: 1, g: 1, b: 1, a: 1}
+  colorChanges:
+  - plant: {fileID: 11400000, guid: 90bb148c9c619f84180898470db65174, type: 2}
+    color: {r: 0, g: 1, b: 0.9647059, a: 1}
+  appearRequirements:
+  - rid: 7730018702449442816
+  - rid: 7730018702449442818
+  tameRequirements:
+  - rid: 7730018702449442817
+  - rid: 7730018702449442819
+  - rid: 7730018702449442822
+  unlockableTree: {fileID: 11400000, guid: 52307c95b856dc64a98fa1155e6835c7, type: 2}
+  alreadyTamedOnce: 0
+  firstTimeTamingExperience: 25
+  alreadySeenOnce: 0
+  firstTimeSeeingExperience: 10
+  seenAnimalList: {fileID: 11400000, guid: 1037cef401917174cb1869484c350646, type: 2}
+  references:
+    version: 2
+    RefIds:
+    - rid: 7730018702449442816
+      type: {class: GardenItemRequirement, ns: , asm: Assembly-CSharp}
+      data:
+        requiredQuantity: 3
+        requirementDiscovered: 1
+        _gardenObject: {fileID: 11400000, guid: 53cacef1fc3539949a7dc22d927f92eb, type: 2}
+        requirementType: 1
+    - rid: 7730018702449442817
+      type: {class: TileRequirement, ns: , asm: Assembly-CSharp}
+      data:
+        requiredQuantity: 10
+        requirementDiscovered: 0
+        _tile: {fileID: 11400000, guid: f7781538698643543959582e17126833, type: 2}
+    - rid: 7730018702449442818
+      type: {class: TileRequirement, ns: , asm: Assembly-CSharp}
+      data:
+        requiredQuantity: 5
+        requirementDiscovered: 1
+        _tile: {fileID: 11400000, guid: f7781538698643543959582e17126833, type: 2}
+    - rid: 7730018702449442819
+      type: {class: GardenItemRequirement, ns: , asm: Assembly-CSharp}
+      data:
+        requiredQuantity: 2
+        requirementDiscovered: 0
+        _gardenObject: {fileID: 11400000, guid: 0ebd7dc7531608f4690790e0bdf5db14, type: 2}
+        requirementType: 1
+    - rid: 7730018702449442822
+      type: {class: GardenItemRequirement, ns: , asm: Assembly-CSharp}
+      data:
+        requiredQuantity: 3
+        requirementDiscovered: 0
+        _gardenObject: {fileID: 11400000, guid: 53cacef1fc3539949a7dc22d927f92eb, type: 2}
+        requirementType: 0

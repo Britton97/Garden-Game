@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c7100186b47d748a23cde18334df41, type: 3}
+  m_Name: Idle For Time
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  selfBoolCondition: {fileID: 11400000, guid: 5677c485f519d8441b7926e19da8f148, type: 2}
+  possibleExitStates:
+  - {fileID: 11400000, guid: 76a521d9ed7bffe43b81538a38813b16, type: 2}
+  - {fileID: 11400000, guid: 3a2481643fb166e429849e5dddc0e799, type: 2}

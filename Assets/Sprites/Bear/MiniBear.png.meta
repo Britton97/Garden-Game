@@ -1,0 +1,1185 @@
+fileFormatVersion: 2
+guid: 904ee2ef3c7a7294492a2bb3662dc202
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MiniBear_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: -9}
+        - {x: 12, y: -7}
+        - {x: 10, y: -5}
+        - {x: 9, y: -5}
+        - {x: 7, y: -3}
+        - {x: 5, y: -3}
+        - {x: 4, y: -4}
+        - {x: 2, y: -3}
+        - {x: -1, y: -3}
+        - {x: -2, y: -4}
+        - {x: -8, y: -4}
+        - {x: -12, y: -8}
+        - {x: -11, y: -13}
+        - {x: -9, y: -16}
+        - {x: 6, y: -16}
+        - {x: 7, y: -15}
+        - {x: 6, y: -12}
+        - {x: 9, y: -12}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 00277a23a760958459e60932f29313bb
+      internalID: -1923762988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: -9}
+        - {x: 12, y: -7}
+        - {x: 10, y: -5}
+        - {x: 9, y: -5}
+        - {x: 7, y: -3}
+        - {x: 5, y: -3}
+        - {x: 3, y: -5}
+        - {x: 2, y: -4}
+        - {x: -1, y: -4}
+        - {x: -2, y: -5}
+        - {x: -8, y: -5}
+        - {x: -12, y: -8}
+        - {x: -11, y: -13}
+        - {x: -9, y: -16}
+        - {x: 6, y: -16}
+        - {x: 7, y: -15}
+        - {x: 6, y: -12}
+        - {x: 9, y: -12}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 33b7ebd6c74666246af19b75b7d97867
+      internalID: 1116812366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: -10}
+        - {x: 12, y: -8}
+        - {x: 10, y: -6}
+        - {x: 9, y: -6}
+        - {x: 7, y: -4}
+        - {x: 5, y: -4}
+        - {x: 4, y: -5}
+        - {x: 2, y: -4}
+        - {x: -1, y: -4}
+        - {x: -2, y: -5}
+        - {x: -8, y: -5}
+        - {x: -12, y: -9}
+        - {x: -11, y: -14}
+        - {x: -9, y: -16}
+        - {x: 6, y: -16}
+        - {x: 7, y: -15}
+        - {x: 6, y: -13}
+        - {x: 9, y: -13}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: ce99882bed0523e41bfebd1f1ddf8fd7
+      internalID: -1174330402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: a84f0dd8b48f75841882fb620be99429
+      internalID: 1853948052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: -15}
+        - {x: -1, y: -16}
+        - {x: 2, y: -16}
+        - {x: 3, y: -15}
+        - {x: 6, y: -15}
+        - {x: 9, y: -12}
+        - {x: 9, y: -10}
+        - {x: 12, y: -7}
+        - {x: 12, y: -5}
+        - {x: 7, y: -1}
+        - {x: 5, y: -1}
+        - {x: 4, y: -2}
+        - {x: -2, y: -3}
+        - {x: -3, y: -4}
+        - {x: -8, y: -4}
+        - {x: -12, y: -8}
+        - {x: -12, y: -15}
+        - {x: -11, y: -16}
+        - {x: -3, y: -16}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 49e52b81f977ebf4dab4e3f231efee7a
+      internalID: 834848985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: -10}
+        - {x: 12, y: -8}
+        - {x: 12, y: -6}
+        - {x: 7, y: -2}
+        - {x: -1, y: -2}
+        - {x: -2, y: -3}
+        - {x: -8, y: -3}
+        - {x: -11, y: -5}
+        - {x: -15, y: -7}
+        - {x: -15, y: -11}
+        - {x: -12, y: -14}
+        - {x: -10, y: -13}
+        - {x: -6, y: -13}
+        - {x: -5, y: -12}
+        - {x: 0, y: -12}
+        - {x: 3, y: -16}
+        - {x: 7, y: -14}
+        - {x: 8, y: -15}
+        - {x: 11, y: -14}
+        - {x: 11, y: -11}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 191c50d321b914c4fb5956551767d61d
+      internalID: -1290046467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: -14}
+        - {x: 14, y: -11}
+        - {x: 12, y: -9}
+        - {x: 12, y: -7}
+        - {x: 10, y: -5}
+        - {x: 9, y: -5}
+        - {x: 7, y: -3}
+        - {x: 5, y: -3}
+        - {x: 4, y: -4}
+        - {x: 1, y: -3}
+        - {x: -8, y: -2}
+        - {x: -11, y: -5}
+        - {x: -14, y: -5}
+        - {x: -16, y: -7}
+        - {x: -16, y: -8}
+        - {x: -11, y: -14}
+        - {x: -7, y: -14}
+        - {x: -5, y: -12}
+        - {x: 0, y: -12}
+        - {x: 4, y: -14}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 8b8cfd586af949e43ae2b7304e3cb75e
+      internalID: 430497765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: -8}
+        - {x: 7, y: -4}
+        - {x: -2, y: -4}
+        - {x: -3, y: -3}
+        - {x: -8, y: -3}
+        - {x: -12, y: -7}
+        - {x: -12, y: -10}
+        - {x: -14, y: -12}
+        - {x: -14, y: -14}
+        - {x: -12, y: -16}
+        - {x: -6, y: -16}
+        - {x: -2, y: -13}
+        - {x: 2, y: -16}
+        - {x: 9, y: -16}
+        - {x: 11, y: -14}
+        - {x: 10, y: -12}
+        - {x: 12, y: -10}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 1a5af3089f752a746a32c1be3659fafd
+      internalID: 1028543257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: -15}
+        - {x: 7, y: -12}
+        - {x: 9, y: -12}
+        - {x: 12, y: -9}
+        - {x: 12, y: -7}
+        - {x: 10, y: -5}
+        - {x: 9, y: -5}
+        - {x: 7, y: -3}
+        - {x: 5, y: -3}
+        - {x: 4, y: -4}
+        - {x: 2, y: -3}
+        - {x: -1, y: -3}
+        - {x: -2, y: -4}
+        - {x: -8, y: -4}
+        - {x: -12, y: -8}
+        - {x: -12, y: -10}
+        - {x: -8, y: -16}
+        - {x: -3, y: -16}
+        - {x: -2, y: -15}
+        - {x: -1, y: -16}
+        - {x: 7, y: -16}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 146247f8344238246b55064d2bb72343
+      internalID: 242741810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_9
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: -7}
+        - {x: 12, y: -5}
+        - {x: 10, y: -3}
+        - {x: 9, y: -3}
+        - {x: 7, y: -1}
+        - {x: 5, y: -1}
+        - {x: 4, y: -2}
+        - {x: -2, y: -3}
+        - {x: -3, y: -4}
+        - {x: -8, y: -4}
+        - {x: -11, y: -7}
+        - {x: -12, y: -11}
+        - {x: -10, y: -13}
+        - {x: -6, y: -16}
+        - {x: 2, y: -16}
+        - {x: 6, y: -12}
+        - {x: 6, y: -10}
+        - {x: 9, y: -10}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 293030ed70dd7be45bee7fe04a6180fa
+      internalID: 1470880808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9680643b5f743944986dfbfb1f43b37
+      internalID: 1995334984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dee0a89a5f69ea4a89b07a2a437ad9f
+      internalID: -1552761449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac7c9e4ca8290bb4f810c2b9bec5a1f0
+      internalID: 1821630224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5312ef4ea02ab24f91830f0c517b088
+      internalID: 1740477266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9510edadbd2fbd64bb6cc4eab8df17a6
+      internalID: -1918548270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_15
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901cbaef53fcd6f4dabcf3ba088fa778
+      internalID: 1231593097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82cbcfec179e7743bbb80d6969c40a3
+      internalID: -499715586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64a298efbda71d41b8fb4ec61cb1587
+      internalID: 19688891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_18
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 880b8eb1ee752224fa80adef0f0548d0
+      internalID: 1718425117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602ab5104a295594b88fa72e5c8f453f
+      internalID: -593793776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_20
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706be6668ac93cd49838cd45988460db
+      internalID: -170982961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_21
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56e6c10f35c44848b352c88431422ef
+      internalID: -46719670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b81a45dc7d7274e8ec6d2c311e06be
+      internalID: -2117386179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_23
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d2ab7b98b700542aebae81b4b4895f
+      internalID: -1050712544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7be6255cf52eb04c8caad1c9b8f1388
+      internalID: 503193333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69935e43fc36e8f4bb038ef98d282960
+      internalID: -2066365642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0722752a88af1c34891f0215cf26ba15
+      internalID: -913577028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558ac599f9a4a924ea9f371e3c7581cf
+      internalID: 1556562875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85e23313dbd6b643b041fc362dc4b0c
+      internalID: 663718965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e51e4a4baf2d6f4f9bd951f6c1abb02
+      internalID: -503696741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da07603227b02647b083484f15b3113
+      internalID: 1131690283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_31
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318d230d746960841914851858b04bb5
+      internalID: -2081568920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_32
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da8e4f8428439d46b39eee1cb5559af
+      internalID: 1749644387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_33
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a970b0ae38a5df45a87f872ce2ba553
+      internalID: -1362730696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13608c0bc10ef9641a1dd25e997a5447
+      internalID: 1118609989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_35
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1676485fed43ce24cb2a9f1345358d99
+      internalID: -1822222853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974da3692f97c914e83cf5ed6bb07f41
+      internalID: -625718249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d1420950e430543bf471eb1220905e
+      internalID: -1112148274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_38
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a02f76c1679a04692eb779124b820d
+      internalID: -1603230931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBear_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d06acda450697744bddbe75f3c64ef3
+      internalID: 1120066020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      MiniBear_0: -1923762988
+      MiniBear_1: 1116812366
+      MiniBear_10: 1995334984
+      MiniBear_11: -1552761449
+      MiniBear_12: 1821630224
+      MiniBear_13: 1740477266
+      MiniBear_14: -1918548270
+      MiniBear_15: 1231593097
+      MiniBear_16: -499715586
+      MiniBear_17: 19688891
+      MiniBear_18: 1718425117
+      MiniBear_19: -593793776
+      MiniBear_2: -1174330402
+      MiniBear_20: -170982961
+      MiniBear_21: -46719670
+      MiniBear_22: -2117386179
+      MiniBear_23: -1050712544
+      MiniBear_24: 503193333
+      MiniBear_25: -2066365642
+      MiniBear_26: -913577028
+      MiniBear_27: 1556562875
+      MiniBear_28: 663718965
+      MiniBear_29: -503696741
+      MiniBear_3: 1853948052
+      MiniBear_30: 1131690283
+      MiniBear_31: -2081568920
+      MiniBear_32: 1749644387
+      MiniBear_33: -1362730696
+      MiniBear_34: 1118609989
+      MiniBear_35: -1822222853
+      MiniBear_36: -625718249
+      MiniBear_37: -1112148274
+      MiniBear_38: -1603230931
+      MiniBear_39: 1120066020
+      MiniBear_4: 834848985
+      MiniBear_5: -1290046467
+      MiniBear_6: 430497765
+      MiniBear_7: 1028543257
+      MiniBear_8: 242741810
+      MiniBear_9: 1470880808
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

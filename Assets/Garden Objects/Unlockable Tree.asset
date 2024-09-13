@@ -1,0 +1,272 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5800ebe98815c2d4fb9b85526c060b98, type: 3}
+  m_Name: Unlockable Tree
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 86bde7687ad513d47b8a1a591b23c8f1, type: 2}
+    - {fileID: 11400000, guid: 1e49752469b8493418d0b39b732addb0, type: 2}
+    - {fileID: 11400000, guid: caf6a96be9e5fce469046fd84fc6b84e, type: 2}
+    - {fileID: 11400000, guid: 40f4bf605ba79e240bc165aad5425a7c, type: 2}
+    - {fileID: 11400000, guid: 53cacef1fc3539949a7dc22d927f92eb, type: 2}
+    - {fileID: 11400000, guid: 90bb148c9c619f84180898470db65174, type: 2}
+    - {fileID: 11400000, guid: 68a4751d1eca0b74fabb1893fcc4e6a3, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: playerLevelsDictionary
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[PlayerLevel,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 7
+      Data: 2|PlayerLevel, Assembly-CSharp
+    - Name: level
+      Entry: 3
+      Data: 0
+    - Name: experienceRequired
+      Entry: 3
+      Data: 30
+    - Name: unlockables
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[GardenObject_SO, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: 4|PlayerLevel, Assembly-CSharp
+    - Name: level
+      Entry: 3
+      Data: 1
+    - Name: experienceRequired
+      Entry: 3
+      Data: 60
+    - Name: unlockables
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[GardenObject_SO, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 7
+      Data: 6|PlayerLevel, Assembly-CSharp
+    - Name: level
+      Entry: 3
+      Data: 2
+    - Name: experienceRequired
+      Entry: 3
+      Data: 90
+    - Name: unlockables
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[GardenObject_SO, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 7
+      Data: 8|PlayerLevel, Assembly-CSharp
+    - Name: level
+      Entry: 3
+      Data: 3
+    - Name: experienceRequired
+      Entry: 3
+      Data: 120
+    - Name: unlockables
+      Entry: 7
+      Data: 9|System.Collections.Generic.List`1[[GardenObject_SO, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4
+    - Name: $v
+      Entry: 7
+      Data: 10|PlayerLevel, Assembly-CSharp
+    - Name: level
+      Entry: 3
+      Data: 4
+    - Name: experienceRequired
+      Entry: 3
+      Data: 150
+    - Name: unlockables
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[GardenObject_SO, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  currentLevel: 1
+  accumulatedExperience: 45
+  maxLevel: 50
+  newLevelAction: {fileID: 11400000, guid: 967eed497bf1bc6469e5ae79c5cfcce0, type: 2}
+  masterAnimalSpawnRequirementsList: {fileID: 11400000, guid: e3c3b91dcde6c7e4d910fa194c730752, type: 2}
+  alwaysUnlocked:
+  - {fileID: 11400000, guid: 0ebd7dc7531608f4690790e0bdf5db14, type: 2}
+  - {fileID: 11400000, guid: e7a2476a0601d42459026957893b485a, type: 2}
+  playerLevels:
+  - level: 0
+    experienceRequired: 30
+    unlockables: []
+  - level: 1
+    experienceRequired: 60
+    unlockables:
+    - {fileID: 11400000, guid: 86bde7687ad513d47b8a1a591b23c8f1, type: 2}
+    - {fileID: 11400000, guid: 1e49752469b8493418d0b39b732addb0, type: 2}
+    - {fileID: 11400000, guid: caf6a96be9e5fce469046fd84fc6b84e, type: 2}
+  - level: 2
+    experienceRequired: 90
+    unlockables:
+    - {fileID: 11400000, guid: 40f4bf605ba79e240bc165aad5425a7c, type: 2}
+    - {fileID: 11400000, guid: 53cacef1fc3539949a7dc22d927f92eb, type: 2}
+  - level: 3
+    experienceRequired: 120
+    unlockables:
+    - {fileID: 11400000, guid: 90bb148c9c619f84180898470db65174, type: 2}
+  - level: 4
+    experienceRequired: 150
+    unlockables:
+    - {fileID: 11400000, guid: 68a4751d1eca0b74fabb1893fcc4e6a3, type: 2}

@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff7f6aa12d3d554aaf45ac3dac8d480, type: 3}
+  m_Name: Bear Info
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  objectSprite: {fileID: 663718965, guid: 904ee2ef3c7a7294492a2bb3662dc202, type: 3}
+  gardenObjectName: Bear
+  maxQuantity: 2
+  objectPrefab: {fileID: 4509088017087634523, guid: e3d43095b0d8f3b4e95648307359bb6b, type: 3}
+  spawnChance: 1
+  sellPrice: 50
+  untamedColor: {r: 0, g: 0, b: 0, a: 1}
+  tamedColor: {r: 1, g: 1, b: 1, a: 1}
+  colorChanges:
+  - plant: {fileID: 11400000, guid: 53cacef1fc3539949a7dc22d927f92eb, type: 2}
+    color: {r: 1, g: 0, b: 0, a: 1}
+  appearRequirements:
+  - rid: 7730018702449442828
+  - rid: 7730018702449442829
+  tameRequirements:
+  - rid: 7730018702449442831
+  - rid: 7730018702449442832
+  - rid: 7730018702449442833
+  unlockableTree: {fileID: 11400000, guid: 52307c95b856dc64a98fa1155e6835c7, type: 2}
+  alreadyTamedOnce: 0
+  firstTimeTamingExperience: 25
+  alreadySeenOnce: 0
+  firstTimeSeeingExperience: 10
+  seenAnimalList: {fileID: 11400000, guid: 1037cef401917174cb1869484c350646, type: 2}
+  references:
+    version: 2
+    RefIds:
+    - rid: 7730018702449442828
+      type: {class: GardenItemRequirement, ns: , asm: Assembly-CSharp}
+      data:
+        requiredQuantity: 1
+        requirementDiscovered: 0
+        _gardenObject: {fileID: 11400000, guid: 40f4bf605ba79e240bc165aad5425a7c, type: 2}
+        requirementType: 1
+    - rid: 7730018702449442829
+      type: {class: GardenItemRequirement, ns: , asm: Assembly-CSharp}
+      data:
+        requiredQuantity: 1
+        requirementDiscovered: 0
+        _gardenObject: {fileID: 11400000, guid: 0ebd7dc7531608f4690790e0bdf5db14, type: 2}
+        requirementType: 1
+    - rid: 7730018702449442831
+      type: {class: GardenItemRequirement, ns: , asm: Assembly-CSharp}
+      data:
+        requiredQuantity: 1
+        requirementDiscovered: 0
+        _gardenObject: {fileID: 11400000, guid: 40f4bf605ba79e240bc165aad5425a7c, type: 2}
+        requirementType: 0
+    - rid: 7730018702449442832
+      type: {class: GardenItemRequirement, ns: , asm: Assembly-CSharp}
+      data:
+        requiredQuantity: 2
+        requirementDiscovered: 0
+        _gardenObject: {fileID: 11400000, guid: 0ebd7dc7531608f4690790e0bdf5db14, type: 2}
+        requirementType: 0
+    - rid: 7730018702449442833
+      type: {class: GardenItemRequirement, ns: , asm: Assembly-CSharp}
+      data:
+        requiredQuantity: 3
+        requirementDiscovered: 0
+        _gardenObject: {fileID: 11400000, guid: 86bde7687ad513d47b8a1a591b23c8f1, type: 2}
+        requirementType: 0
