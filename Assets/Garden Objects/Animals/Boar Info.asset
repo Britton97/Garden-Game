@@ -33,12 +33,12 @@ MonoBehaviour:
   - plant: {fileID: 11400000, guid: 53cacef1fc3539949a7dc22d927f92eb, type: 2}
     color: {r: 1, g: 0, b: 0, a: 1}
   appearRequirements:
-  - rid: 7730018702449442823
-  - rid: 7730018702449442824
+  - rid: 7730018974822301719
+  - rid: 7730018974822301720
   tameRequirements:
-  - rid: 7730018702449442825
-  - rid: 7730018702449442826
-  - rid: 7730018702449442827
+  - rid: 7730018974822301721
+  - rid: 7730018974822301722
+  - rid: 7730018974822301723
   unlockableTree: {fileID: 11400000, guid: 52307c95b856dc64a98fa1155e6835c7, type: 2}
   alreadyTamedOnce: 0
   firstTimeTamingExperience: 25
@@ -48,37 +48,37 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 7730018702449442823
+    - rid: 7730018974822301719
       type: {class: GardenItemRequirement, ns: , asm: Assembly-CSharp}
       data:
         requiredQuantity: 1
-        requirementDiscovered: 1
+        requirementDiscovered: 0
         _gardenObject: {fileID: 11400000, guid: 0ebd7dc7531608f4690790e0bdf5db14, type: 2}
         requirementType: 1
-    - rid: 7730018702449442824
+    - rid: 7730018974822301720
       type: {class: GardenItemRequirement, ns: , asm: Assembly-CSharp}
       data:
         requiredQuantity: 2
-        requirementDiscovered: 1
-        _gardenObject: {fileID: 11400000, guid: 1e49752469b8493418d0b39b732addb0, type: 2}
-        requirementType: 1
-    - rid: 7730018702449442825
-      type: {class: GardenItemRequirement, ns: , asm: Assembly-CSharp}
-      data:
-        requiredQuantity: 2
-        requirementDiscovered: 1
-        _gardenObject: {fileID: 11400000, guid: 0ebd7dc7531608f4690790e0bdf5db14, type: 2}
-        requirementType: 0
-    - rid: 7730018702449442826
-      type: {class: GardenItemRequirement, ns: , asm: Assembly-CSharp}
-      data:
-        requiredQuantity: 2
-        requirementDiscovered: 1
+        requirementDiscovered: 0
         _gardenObject: {fileID: 11400000, guid: 1e49752469b8493418d0b39b732addb0, type: 2}
         requirementType: 0
-    - rid: 7730018702449442827
+    - rid: 7730018974822301721
       type: {class: TileRequirement, ns: , asm: Assembly-CSharp}
       data:
-        requiredQuantity: 10
-        requirementDiscovered: 1
+        requiredQuantity: 15
+        requirementDiscovered: 0
         _tile: {fileID: 11400000, guid: af570370a7e833e4d9976274b069bf21, type: 2}
+    - rid: 7730018974822301722
+      type: {class: GardenItemRequirement, ns: , asm: Assembly-CSharp}
+      data:
+        requiredQuantity: 2
+        requirementDiscovered: 0
+        _gardenObject: {fileID: 11400000, guid: 0ebd7dc7531608f4690790e0bdf5db14, type: 2}
+        requirementType: 0
+    - rid: 7730018974822301723
+      type: {class: GardenItemRequirement, ns: , asm: Assembly-CSharp}
+      data:
+        requiredQuantity: 3
+        requirementDiscovered: 0
+        _gardenObject: {fileID: 11400000, guid: 1e49752469b8493418d0b39b732addb0, type: 2}
+        requirementType: 0

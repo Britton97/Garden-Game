@@ -20,7 +20,7 @@ public class GardenObject_SO : SerializedScriptableObject
 }
 
 [Serializable]
-[InlineEditor]
+//[InlineEditor]
 public abstract class ItemRequirement_Abs
 {
     public abstract string ItemName { get;}

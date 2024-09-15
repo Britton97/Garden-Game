@@ -23,3 +23,6 @@ MonoBehaviour:
     SerializationNodes: []
   animalSpawnRequirements:
   - {fileID: 11400000, guid: 0ebd7dc7531608f4690790e0bdf5db14, type: 2}
+  - {fileID: 11400000, guid: 40f4bf605ba79e240bc165aad5425a7c, type: 2}
+  - {fileID: 11400000, guid: 68a4751d1eca0b74fabb1893fcc4e6a3, type: 2}
+  - {fileID: 11400000, guid: caf6a96be9e5fce469046fd84fc6b84e, type: 2}

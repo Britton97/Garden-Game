@@ -100,10 +100,16 @@ public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDi
         //if it is then set the requirement to true
         foreach (AnimalChecklist item in localGardenItemRequirements)
         {
-            //Debug.Log($"Checking for {item.itemRequirement.GetName()} ({item.itemRequirement.GetCount()}) on {animalObject.GardenObjectName}");
+            Debug.Log($"Checking for {item.itemRequirement.GetName()} ({item.itemRequirement.GetCount()}) on {animalObject.GardenObjectName}");
             if (item.isMet) { continue; }
             if (item.itemRequirement is GardenItemRequirement)
             {
+                //cast the item requirement to a GardenItemRequirement
+                GardenItemRequirement gardenItemRequirement = (GardenItemRequirement)item.itemRequirement;
+                if (gardenItemRequirement.requirementType == RequirementType.ItemInGarden)
+                {
+                    item.currentQuantity = GardenManager.Instance.GetQuantityOfItem(gardenItemRequirement.ItemName);
+                }
                 if (item.currentQuantity >= item.itemRequirement.requiredQuantity)
                 {
                     item.isMet = true;
@@ -112,7 +118,7 @@ public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDi
             }
             else if (item.itemRequirement is TileRequirement)
             {
-                Debug.Log($"Checking for {item.itemRequirement.GetName()} ({item.itemRequirement.GetCount()}) on {animalObject.GardenObjectName}");
+                //Debug.Log($"Checking for {item.itemRequirement.GetName()} ({item.itemRequirement.GetCount()}) on {animalObject.GardenObjectName}");
                 int tileCount = item.itemRequirement.GetCount();
                 item.currentQuantity = tileCount;
                 if (tileCount >= item.itemRequirement.requiredQuantity)
@@ -315,5 +321,20 @@ public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDi
         {
             _spriteRenderer.flipX = true;
         }
+    }
+
+    //coroutine that will make a timer to destroy the animal after a certain amount of time
+    private Coroutine destroyAfterTimeCoroutine;
+    public void DestroyAfterTime(float time)
+    {
+        if (destroyAfterTimeCoroutine == null)
+        {
+            destroyAfterTimeCoroutine = StartCoroutine(DestroyAfterTimeCoroutine(time));
+        }
+    }
+    private IEnumerator DestroyAfterTimeCoroutine(float time)
+    {
+        yield return new WaitForSeconds(time);
+        Destroy(gameObject);
     }
 }

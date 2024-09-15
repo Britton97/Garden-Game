@@ -90,6 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animal: {fileID: 0}
   animalSprite: {fileID: 1991544251783308595}
+  questionMark: {fileID: 0}
 --- !u!1 &7584764176270937149
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,3 +182,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animal: {fileID: 0}
   animalSprite: {fileID: 1991544251783308595}
+  questionMark: {fileID: 2840336364714655594, guid: 3338edd4132144e44abea6d16f6ea9e7, type: 3}

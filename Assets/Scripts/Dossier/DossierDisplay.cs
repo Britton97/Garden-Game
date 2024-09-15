@@ -9,18 +9,29 @@ public class DossierDisplay : MonoBehaviour
 {
     [SerializeField] public Animal_SO animal;
     [SerializeField] private Image animalSprite;
+    [SerializeField] private Sprite questionMark;
 
     public void SetDisplay(Animal_SO animal)
     {
         this.animal = animal;
         animalSprite.sprite = animal.gardenObjectSprite;
-        if(animal.alreadyTamedOnce)
+
+        if (!animal.alreadySeenOnce)
         {
-            animalSprite.color = Color.white;
+            animalSprite.sprite = questionMark;
+            animalSprite.color = Color.black;
         }
         else
         {
-            animalSprite.color = Color.black;
+            if (animal.alreadyTamedOnce)
+            {
+                animalSprite.color = Color.white;
+            }
+            else
+            {
+                animalSprite.color = Color.black;
+            }
         }
+
     }
 }

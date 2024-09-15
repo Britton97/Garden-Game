@@ -29,7 +29,7 @@ public class Dossier_Manager : MonoBehaviour
     [SerializeField] RectTransform requirementDisplay;
     [SerializeField] Image appearButtonImage, tameButtonImage;
     [SerializeField] Color activeButtonColor, idleButtonColor;
-
+    [SerializeField] private Sprite questionMarkSprite;
     private void Start()
     {
         // Initialize the selector position
@@ -144,16 +144,27 @@ public class Dossier_Manager : MonoBehaviour
             return;
         }
         DossierDisplay currentDossierDisplay = dossierDisplays[currentDossierIndex].GetComponent<DossierDisplay>();
-        if(currentDossierDisplay.animal.alreadyTamedOnce)
+        Debug.Log($"Current Dossier Display: {currentDossierDisplay.animal.GardenObjectName}");
+
+        if (!currentDossierDisplay.animal.alreadySeenOnce)
         {
-            displayAnimalSprite.color = Color.white;
+            displayAnimalSprite.sprite = questionMarkSprite;
+            displayAnimalSprite.color = Color.black;
+            displayAnimalName.text = "???";
         }
         else
         {
-            displayAnimalSprite.color = Color.black;
+            if (currentDossierDisplay.animal.alreadyTamedOnce)
+            {
+                displayAnimalSprite.color = Color.white;
+            }
+            else
+            {
+                displayAnimalSprite.color = Color.black;
+            }
+            displayAnimalSprite.sprite = currentDossierDisplay.animal.gardenObjectSprite;
+            displayAnimalName.text = currentDossierDisplay.animal.GardenObjectName;
         }
-        displayAnimalSprite.sprite = currentDossierDisplay.animal.gardenObjectSprite;
-        displayAnimalName.text = currentDossierDisplay.animal.GardenObjectName;
         DisplayRequirements(currentDossierDisplay);
     }
 
@@ -162,6 +173,7 @@ public class Dossier_Manager : MonoBehaviour
     public void DisplayRequirements(DossierDisplay dossierDisplay)
     {
         List<AnimalChecklist> requirementsList = new List<AnimalChecklist>();
+        bool seenAlready = dossierDisplay.animal.alreadySeenOnce;
         //Debug.Log($"Count: {animalObject.itemRequirements.Count}");
         switch (displayState)
         {
@@ -206,7 +218,11 @@ public class Dossier_Manager : MonoBehaviour
             //need to get a boolean for each requirement to see if it is met
             //if it is met then send darker green color and green color
             //if it is not met then send darker red color and red color
-            if (requirementsList[i].itemRequirement.requirementDiscovered == false)
+            if (!seenAlready)
+            {
+                activeRequirementDisplays[i].SetDisplayNotSeen(darkerUnknownColor, unknownColor);
+            }
+            else if (requirementsList[i].itemRequirement.requirementDiscovered == false)
             {
                 activeRequirementDisplays[i].SetDisplay(requirementsList[i], darkerUnknownColor, unknownColor, displayState);
             }

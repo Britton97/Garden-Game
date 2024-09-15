@@ -42,4 +42,12 @@ public class DossierRequirementDisplay : MonoBehaviour
         //_requirementText.text = checklist.DossierTameRequirementText;
         _requirementImage.sprite = checklist.itemRequirement.GetSprite();
     }
+
+    public void SetDisplayNotSeen(Color darkerColor, Color lighterColor)
+    {
+        _requirementText.text = unknownText;
+        _requirementImage.sprite = unknownSprite;
+        _requirementImageParent.color = darkerColor;
+        bannerImage.color = lighterColor;
+    }
 }

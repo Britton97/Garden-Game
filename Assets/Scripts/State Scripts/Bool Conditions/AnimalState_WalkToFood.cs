@@ -63,6 +63,9 @@ public class AnimalState_WalkToFood : AnimalStateBoolCondition_Abstract
         if (requirement == null && gardenObject_ctx.hunger <= 0)
         {
             //Destroy(gardenObject_ctx.gameObject);
+            gardenObject_ctx.DestroyAfterTime(10);
+            //play the frustrated gif for 10 seconds
+            gardenObject_ctx._GifPlayer.PlayGif("Frustrated", 10f);
             Debug.Log("No food requirement found and at 0 hunger");
             return false;
         }

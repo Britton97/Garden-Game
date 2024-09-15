@@ -182,7 +182,7 @@ public class ColorChange
 [Serializable]
 public class AnimalChecklist // animal requirements use ItemRequirement_Abs
 {
-    public ItemRequirement_Abs itemRequirement;
+    [SerializeReference] public ItemRequirement_Abs itemRequirement;
     public bool isMet;
     public int currentQuantity;
     public int requiredQuantity;

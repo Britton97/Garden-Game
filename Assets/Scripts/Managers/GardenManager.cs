@@ -251,6 +251,16 @@ public class GardenManager : MonoBehaviour
         {
             //if the item is met, continue
             if (item.isMet) { continue; }
+            //if itemRequirement is of type GardenItemRequirement and RequirementType is item in garden then return
+            //cast the itemRequirement to GardenItemRequirement
+            if(item.itemRequirement is GardenItemRequirement)
+            {
+                GardenItemRequirement gardenItemRequirement = (GardenItemRequirement)item.itemRequirement;
+                if (gardenItemRequirement.requirementType == RequirementType.ItemInGarden)
+                {
+                    continue;
+                }
+            }
             //if the item is not met, check if the item is in the garden item quantities dictionary
             if (gardenItemQuantities.ContainsKey(item.itemRequirement.ItemName) && gardenItemQuantities[item.itemRequirement.ItemName].Count > 0)
             {
