@@ -24,7 +24,8 @@ public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDi
 
     //public List<BaseState_Animal> states = new List<BaseState_Animal>();
     public BaseState_Animal currentState;
-    public List<AnimalChecklist> localGardenItemRequirements = new List<AnimalChecklist>();
+    public List<AnimalChecklist> localTameRequirements = new List<AnimalChecklist>();
+    public List<AnimalChecklist> localRomanceRequirements = new List<AnimalChecklist>();
 
     [SerializeField] private GifPlayer gifPlayer;
     public GifPlayer _GifPlayer => gifPlayer;
@@ -75,11 +76,16 @@ public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDi
     #region Requirements
     public void MakeLocalCopyOfRequirements()
     {
-        localGardenItemRequirements.Clear();
-        //Debug.Log($"Count: {animalObject.itemRequirements.Count}");
+        localTameRequirements.Clear();
+        localRomanceRequirements.Clear();
         foreach (ItemRequirement_Abs requirement in animalObject.tameRequirements)
         {
-            localGardenItemRequirements.Add(new AnimalChecklist(requirement));
+            localTameRequirements.Add(new AnimalChecklist(requirement));
+        }
+
+        foreach (ItemRequirement_Abs requirement in animalObject.romanceRequirements)
+        {
+            localRomanceRequirements.Add(new AnimalChecklist(requirement));
         }
     }
 
@@ -98,7 +104,7 @@ public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDi
         //check to local copy of requirements and see if any of those requirements is a Object_SO
         //if it is then check if the object is in the scene and the quantity is met
         //if it is then set the requirement to true
-        foreach (AnimalChecklist item in localGardenItemRequirements)
+        foreach (AnimalChecklist item in localTameRequirements)
         {
             //Debug.Log($"Checking for {item.itemRequirement.GetName()} ({item.itemRequirement.GetCount()}) on {animalObject.GardenObjectName}");
             if (item.isMet) { continue; }
@@ -131,7 +137,7 @@ public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDi
 
         //check if all requirements are met
         bool allRequirementsMet = true;
-        foreach (AnimalChecklist requirement in localGardenItemRequirements)
+        foreach (AnimalChecklist requirement in localTameRequirements)
         {
             if (!requirement.isMet)
             {
@@ -161,13 +167,13 @@ public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDi
 
     public void CheckTamingRequirements(string foodName) //actually more like check requirements
     {
-        foreach (AnimalChecklist requirement in localGardenItemRequirements)
+        foreach (AnimalChecklist requirement in localTameRequirements)
         {
             requirement.CheckRequirement(foodName, this);
         }
 
         bool allRequirementsMet = true;
-        foreach (AnimalChecklist requirement in localGardenItemRequirements)
+        foreach (AnimalChecklist requirement in localTameRequirements)
         {
             if (!requirement.isMet)
             {
@@ -180,6 +186,7 @@ public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDi
         {
             isTamed = true;
             animalObject.UnlockAllTameAndAppearRequirements();
+            animalObject.UnlockFirstRomanceRequirement();
             if (!animalObject.FirstTimeTame)
             {
                 animalObject.alreadyTamedOnce = true;
@@ -194,13 +201,30 @@ public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDi
         }
     }
 
+    public void CheckRomanceRequirements(string foodName)
+    {
+        foreach (AnimalChecklist requirement in localRomanceRequirements)
+        {
+            requirement.CheckRequirement(foodName, this);
+        }
+    }
+
     public List<AnimalChecklist> GetRequirements()
     {
-        return localGardenItemRequirements;
+        if (isTamed)
+        {
+            return localRomanceRequirements;
+        }
+        else
+        {
+            return localTameRequirements;
+        }
     }
 
     public bool ReportRequirements()
     {
+        return true;
+        /*
         if (isTamed)
         {
             return false;
@@ -209,6 +233,7 @@ public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDi
         {
             return true;
         }
+        */
     }
     #endregion
     #region State Functions
@@ -285,7 +310,8 @@ public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDi
     public bool IsMatable()
     {
         //if the last mate time is greater than animalso.mateCooldown then return true
-        if (Time.time - lastMateTime > animalObject.mateCooldown)
+        // and all the romance requirements are filled
+        if (Time.time - lastMateTime > animalObject.mateCooldown && localRomanceRequirements.TrueForAll(x => x.isMet))
         {
             return true;
         }

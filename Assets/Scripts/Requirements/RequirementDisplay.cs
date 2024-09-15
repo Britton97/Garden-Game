@@ -46,6 +46,7 @@ public class RequirementDisplay : MonoBehaviour
 
         itemName = checklist.itemRequirement.GetName();
         currentQuantity = checklist.currentQuantity;
+        //currentQuantity = checklist.itemRequirement.GetCount();
         neededQuantity = checklist.requiredQuantity;
         //isMet = checklist.isMet;
         if(currentQuantity >= neededQuantity)

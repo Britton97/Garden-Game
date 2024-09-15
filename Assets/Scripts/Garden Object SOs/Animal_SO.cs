@@ -21,6 +21,7 @@ public class Animal_SO : GardenObject_SO, iFirstTimeTame, iFirstTimeSeen
 
     [SerializeReference] public List<ItemRequirement_Abs> appearRequirements;
     [SerializeReference] public List<ItemRequirement_Abs> tameRequirements;
+    [SerializeReference] public List<ItemRequirement_Abs> romanceRequirements;
     //public List<TileRequirement> tileRequirements;
 
     public UnlockableTree unlockableTree;
@@ -78,14 +79,16 @@ public class Animal_SO : GardenObject_SO, iFirstTimeTame, iFirstTimeSeen
                 else
                 {
                     ChangeColor(gardenObject.GetName(), context);
+                    context.CheckRomanceRequirements(gardenObject.GetName());
                 }
                 context.animator.SetTrigger("Attack");
-                Destroy(food); //destroying food is not the issue causing the bug
+                Destroy(food);
                 context.interest = null;
                 context._GifPlayer.PlayGif("Happy", 2f);
 
                 //check to see if the food the animal just ate is a requirement for taming or appearing 
                 //if it is then check to see if the requirement is discovered
+                /*
                 foreach (ItemRequirement_Abs requirement in appearRequirements)
                 {
                     if (requirement.ItemName == gardenObject.GetName())
@@ -94,19 +97,34 @@ public class Animal_SO : GardenObject_SO, iFirstTimeTame, iFirstTimeSeen
                         break;
                     }
                 }
-
-                foreach (ItemRequirement_Abs requirement in tameRequirements)
+                */
+                if (context.isTamed == false)
                 {
-                    if (requirement.ItemName == gardenObject.GetName())
+                    foreach (ItemRequirement_Abs requirement in tameRequirements)
                     {
-                        requirement.requirementDiscovered = true;
-                        break;
+                        if (requirement.ItemName == gardenObject.GetName())
+                        {
+                            requirement.requirementDiscovered = true;
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (ItemRequirement_Abs requirement in romanceRequirements)
+                    {
+                        if (requirement.ItemName == gardenObject.GetName())
+                        {
+                            requirement.requirementDiscovered = true;
+                            break;
+                        }
                     }
                 }
             }
         }
     }
 
+    #region Unlock Requirements
     public void UnlockFirstTameRequirement()
     {
         //unlock the first tame requirement
@@ -117,6 +135,25 @@ public class Animal_SO : GardenObject_SO, iFirstTimeTame, iFirstTimeSeen
     {
         //if no tame requirements are discovered then unlock the first tame requirement
         foreach (ItemRequirement_Abs requirement in tameRequirements)
+        {
+            if (requirement.requirementDiscovered == false)
+            {
+                requirement.requirementDiscovered = true;
+                break;
+            }
+        }
+    }
+
+    public void UnlockFirstRomanceRequirement()
+    {
+        //unlock the first romance requirement
+        romanceRequirements[0].requirementDiscovered = true;
+    }
+
+    public void UnlockNextRomanceRequirement()
+    {
+        //if no romance requirements are discovered then unlock the first romance requirement
+        foreach (ItemRequirement_Abs requirement in romanceRequirements)
         {
             if (requirement.requirementDiscovered == false)
             {
@@ -147,8 +184,8 @@ public class Animal_SO : GardenObject_SO, iFirstTimeTame, iFirstTimeSeen
         //using the context to check the requirements of the local requirements
         int discoveredAndMetRequirements = 0;
         int discoveredRequirements = 0;
-        int totalRequirements = context.localGardenItemRequirements.Count;
-        foreach (AnimalChecklist checklist in context.localGardenItemRequirements)
+        int totalRequirements = context.localTameRequirements.Count;
+        foreach (AnimalChecklist checklist in context.localTameRequirements)
         {
             if (checklist.isMet)
             {
@@ -165,6 +202,34 @@ public class Animal_SO : GardenObject_SO, iFirstTimeTame, iFirstTimeSeen
             UnlockNextTameRequirement();
         }
     }
+
+    public void CheckForNextRomanceUnlock(Animal_MonoBehavior context)
+    {
+        //check the localrequirements
+        //check each requirement to see if it is met
+        //if all of the discovered requirements are met then unlock the next requirement
+        //using the context to check the requirements of the local requirements
+        int discoveredAndMetRequirements = 0;
+        int discoveredRequirements = 0;
+        int totalRequirements = context.localRomanceRequirements.Count;
+        foreach (AnimalChecklist checklist in context.localRomanceRequirements)
+        {
+            if (checklist.isMet)
+            {
+                discoveredAndMetRequirements++;
+                if (checklist.itemRequirement.requirementDiscovered)
+                {
+                    discoveredRequirements++;
+                }
+            }
+        }
+
+        if (discoveredAndMetRequirements == discoveredRequirements && discoveredAndMetRequirements < totalRequirements)
+        {
+            UnlockNextRomanceRequirement();
+        }
+    }
+    #endregion
 
     public string GetRandomRequirement()
     {
@@ -185,8 +250,38 @@ public class AnimalChecklist // animal requirements use ItemRequirement_Abs
 {
     [SerializeReference] public ItemRequirement_Abs itemRequirement;
     public bool isMet;
-    public int currentQuantity;
+    [SerializeField] private int _currentQuantity;
+    public int currentQuantity
+    {
+        get { return GetCurrentQuantityCount(); }
+        set { _currentQuantity = value; }
+    }
     public int requiredQuantity;
+
+    private int GetCurrentQuantityCount()
+    {
+        switch (itemRequirement)
+        {
+            case GardenItemRequirement:
+                int count = 0;
+                if (itemRequirement is GardenItemRequirement gardenItemRequirement)
+                {
+                    if (gardenItemRequirement.requirementType == RequirementType.EatItem)
+                    {
+                        count = _currentQuantity;
+                    }
+                    else
+                    {
+                        count = itemRequirement.GetCount();
+                    }
+                }
+                return count; // Add return statement for count
+            case TileRequirement:
+                return itemRequirement.GetCount();
+            default:
+                return -1;
+        }
+    }
     public string DossierTameRequirementText
     {
         get
@@ -295,9 +390,13 @@ public class AnimalChecklist // animal requirements use ItemRequirement_Abs
             currentQuantity++;
             isMet = currentQuantity >= itemRequirement.requiredQuantity;
 
-            if (beforeMet != isMet)
+            if (beforeMet != isMet && context.isTamed == false)
             {
                 context.animalObject.CheckForNextTamingUnlock(context);
+            }
+            else if (beforeMet != isMet && context.isTamed == true)
+            {
+                context.animalObject.CheckForNextRomanceUnlock(context);
             }
         }
     }

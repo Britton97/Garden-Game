@@ -247,7 +247,7 @@ public class GardenManager : MonoBehaviour
     {
         //foreach thing in animal localGardenItemRequirements
         List<GardenObject_MonoBehavior> possibleFood = new List<GardenObject_MonoBehavior>();
-        foreach (AnimalChecklist item in animal.localGardenItemRequirements)
+        foreach (AnimalChecklist item in animal.localTameRequirements)
         {
             //if the item is met, continue
             if (item.isMet) { continue; }

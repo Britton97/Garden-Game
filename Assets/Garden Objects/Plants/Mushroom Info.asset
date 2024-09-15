@@ -97,10 +97,9 @@ MonoBehaviour:
   gardenObjectName: Mushroom
   maxQuantity: 10
   objectPrefab: {fileID: 1178777691787960091, guid: c068f49ad12766a4f8ab5e328ed0138e, type: 3}
-  growthTime: 60
+  growthTime: 4
   rotTime: 120
   waterDrainRate: 45
-  maxWaterFillValue: 1
   cost: 3
   sellPrice: 7
   hungerFillValue: 500
