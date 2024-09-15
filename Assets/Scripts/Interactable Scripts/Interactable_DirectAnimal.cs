@@ -60,7 +60,7 @@ public class Interactable_DirectAnimal : Interactable_Abs
 
     public override void PerformAction(SelectionManager context, GardenObject_MonoBehavior selectedObject)
     {
-        Debug.Log("Performing Action");
+        //Debug.Log("Performing Action");
         selectedObject.transform.parent = null;
         context.transform.parent = null;
 
@@ -85,9 +85,19 @@ public class Interactable_DirectAnimal : Interactable_Abs
         //else set the button text to "Null"
         if (hit.collider != null)
         {
-            if (hit.collider.gameObject.GetComponent<GardenObject_MonoBehavior>() != null)
+            //out a garden object mono behavior
+            if (hit.collider.gameObject.TryGetComponent(out GardenObject_MonoBehavior gardenObject))
             {
-                UIButtonText.InvokeAction($"Eat ({hit.collider.gameObject.name})");
+                //if the garden object has the same name as the selected object
+                if(gardenObject.GetName() == selectedObject.GetName())
+                {
+                    UIButtonText.InvokeAction($"Mate {gardenObject.GetName()} with {selectedObject.GetName()}");
+                }
+                else
+                {
+                    UIButtonText.InvokeAction($"Eat ({gardenObject.GetName()})");
+                }
+                //UIButtonText.InvokeAction($"Eat ({gardenObject.GetName()})");
             }
         }
         //UIButtonText.InvokeAction(selectAndHoverText);
