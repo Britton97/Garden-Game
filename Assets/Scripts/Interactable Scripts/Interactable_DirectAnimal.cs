@@ -31,7 +31,7 @@ public class Interactable_DirectAnimal : Interactable_Abs
 
     public override bool OnSelect(SelectionManager context, GardenObject_MonoBehavior selectedObject)
     {
-        Debug.Log($"Parenting {context.gameObject.name} to {selectedObject.gameObject.name}");
+        //Debug.Log($"Parenting {context.gameObject.name} to {selectedObject.gameObject.name}");
         if(selectedObject is iDirectable)
         {
             iDirectable directable = selectedObject.gameObject.GetComponent<iDirectable>();
