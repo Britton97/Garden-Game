@@ -22,4 +22,4 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   priority: 0
-  distanceToTarget: 0.25
+  distanceToTarget: 0.5

@@ -74,3 +74,9 @@ public interface iEmoji
 {
     GifPlayer _GifPlayer { get; }
 }
+
+public interface iMatable
+{
+    bool IsMatable();
+    void Mate(Animal_MonoBehavior animal1, Animal_MonoBehavior animal2);
+}

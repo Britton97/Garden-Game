@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Rigidbody2D))]
-public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDirectable, iEmoji, iWaterable
+public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDirectable, iEmoji, iWaterable, iMatable
 {
     #region Variables
     public GameObject interest;
@@ -100,7 +100,7 @@ public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDi
         //if it is then set the requirement to true
         foreach (AnimalChecklist item in localGardenItemRequirements)
         {
-            Debug.Log($"Checking for {item.itemRequirement.GetName()} ({item.itemRequirement.GetCount()}) on {animalObject.GardenObjectName}");
+            //Debug.Log($"Checking for {item.itemRequirement.GetName()} ({item.itemRequirement.GetCount()}) on {animalObject.GardenObjectName}");
             if (item.isMet) { continue; }
             if (item.itemRequirement is GardenItemRequirement)
             {
@@ -280,6 +280,37 @@ public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDi
             _GifPlayer.PlayGif("Frustrated", 3f);
         }
     }
+
+    private int lastMateTime = -999;
+    public bool IsMatable()
+    {
+        //if the last mate time is greater than animalso.mateCooldown then return true
+        if (Time.time - lastMateTime > animalObject.mateCooldown)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public void Mate(Animal_MonoBehavior animal1, Animal_MonoBehavior animal2)
+    {
+        Debug.Log($"{animal1.animalObject.GardenObjectName} and {animal2.animalObject.GardenObjectName} are mating");
+        lastMateTime = (int)Time.time;
+        animal1._GifPlayer.PlayGif("Love", 3f);
+        animal2._GifPlayer.PlayGif("Love", 3f);
+        animal1.interest = null;
+        animal2.interest = null;
+        //create a new animal
+        GameObject newAnimal = Instantiate(animal1.animalObject.objectPrefab, animal1.transform.position, Quaternion.identity);
+        //tame the new animal
+        Animal_MonoBehavior newAnimalMonoBehavior = newAnimal.GetComponent<Animal_MonoBehavior>();
+        newAnimalMonoBehavior.isTamed = true;
+        newAnimalMonoBehavior._GifPlayer.PlayGif("Happy", 3f);
+    }
+
     #endregion
     #region Idle Timer / Functions
     [HideInInspector] public Coroutine idleTimerCoroutine;

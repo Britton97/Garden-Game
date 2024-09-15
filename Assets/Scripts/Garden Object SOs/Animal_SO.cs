@@ -14,6 +14,7 @@ public class Animal_SO : GardenObject_SO, iFirstTimeTame, iFirstTimeSeen
     [Range(0, 1)]
     public float spawnChance;
     public int sellPrice;
+    public int mateCooldown = 60;
     public Color untamedColor = new Color(0, 0, 0, 1);
     public Color tamedColor = new Color(1, 1, 1, 1);
     public List<ColorChange> colorChanges;

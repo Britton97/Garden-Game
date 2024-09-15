@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d40335ece140344e88ec59a4a28e390, type: 3}
-  m_Name: Gif Manager
+  m_Script: {fileID: 11500000, guid: 453774357d33fa94782650eb3ccd8d37, type: 3}
+  m_Name: Love Emoji
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -21,9 +21,12 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  gif_SO_List:
-  - {fileID: 11400000, guid: c2d1c4d0e7983a84694fc15a7e0ca588, type: 2}
-  - {fileID: 11400000, guid: e1f7ff57350c97b4a8e27d6c6ccc8d5a, type: 2}
-  - {fileID: 11400000, guid: 2dfef07988d87f14ebd236338453ec20, type: 2}
-  - {fileID: 11400000, guid: bf480a70007b0004cb6708d72587a53a, type: 2}
-  - {fileID: 11400000, guid: 311dccc0cd0739f44a4000e3fa4221b0, type: 2}
+  gifName: Love
+  gifSprites:
+  - {fileID: 117974761138743274, guid: d6caa02d36f8e0d48a88668cf85de158, type: 3}
+  - {fileID: 1914776135196555214, guid: d6caa02d36f8e0d48a88668cf85de158, type: 3}
+  - {fileID: -31948295947698912, guid: d6caa02d36f8e0d48a88668cf85de158, type: 3}
+  frameRate: 0.2
+  loop: 1
+  playOnAwake: 0
+  playOnEnable: 0

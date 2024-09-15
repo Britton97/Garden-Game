@@ -194,9 +194,9 @@ public class SelectionManager : MonoBehaviour
         Vector3 mousePos = ReturnMousePosition();
         RaycastHit2D hit = RaycastForCollider(mousePos, raycastLayer);
 
-        if(hit.collider != null && secondaryInteractable == null)
+        if (hit.collider != null && secondaryInteractable == null)
         {
-            if(hit.collider.gameObject.TryGetComponent<iInteractable>(out iInteractable possibleInteractable))
+            if (hit.collider.gameObject.TryGetComponent<iInteractable>(out iInteractable possibleInteractable))
             { //if hit is an interactable object
                 secondaryInteractable = possibleInteractable;
             }
@@ -216,7 +216,7 @@ public class SelectionManager : MonoBehaviour
         { //if secondaryInteractable is not null and the hit object is not the current hovering object and secondaryHoveringOver is null
           //then call HoverEnterWhileSelected on the current interactable
             secondaryHoveringOver = hit.collider.gameObject;
-            //Debug.Log("Possible Interactable");
+            Debug.Log("Possible Interactable");
             currentInteractable.HoverEnterWhileSelected(this, hoveringOver.GetComponent<GardenObject_MonoBehavior>());
         }
     }
@@ -263,39 +263,49 @@ public class SelectionManager : MonoBehaviour
     public bool MoveAnimalToPoint(Vector3 pos, RaycastHit2D gardenHit)
     {
         if (gardenHit.collider != null && currentSelection == gardenHit.collider.gameObject) { return false; } //if the hit object is the current selection then return false
+        if (currentSelection.TryGetComponent<Animal_MonoBehavior>(out Animal_MonoBehavior animal))
+        { //if the current selection is an animal
+            if (animal.isTamed == false) { return false; } //if animal is not tamed it cannot be directed
 
-        if (gardenHit.collider != null && gardenHit.collider.gameObject.TryGetComponent<Plant_MonoBehavior>(out Plant_MonoBehavior plant)
-        && currentSelection.TryGetComponent<Animal_MonoBehavior>(out Animal_MonoBehavior animal) && plant.plantState == PlantState.Mature)
-        { //if the hit object is a plant and the current selection is an animal
-            if (animal.isTamed == false) { return false; }
-
-            Debug.Log("Animal Eating Plant");
-            animal.interest = gardenHit.collider.gameObject;
-            animal.navMeshAgent.SetDestination(gardenHit.point);
-            animal.SetState(walkToPointState);
-            Deselect();
-            return true;
-        }
-        else
-        {
-            RaycastHit2D groundHit = RaycastForCollider(pos, groundLayer);
-            if (currentSelection.TryGetComponent<Animal_MonoBehavior>(out Animal_MonoBehavior _animal))
-            {
-                if (_animal.isTamed == false) { return false; }
+            if (gardenHit.collider != null && gardenHit.collider.gameObject.TryGetComponent<Plant_MonoBehavior>(out Plant_MonoBehavior plant)
+            && plant.plantState == PlantState.Mature)
+            { //if the hit object is a plant and the plant is mature
+                Debug.Log("Animal Eating Plant");
+                animal.interest = gardenHit.collider.gameObject;
+                animal.navMeshAgent.SetDestination(gardenHit.point);
+                animal.SetState(walkToPointState);
+                Deselect();
+                return true;
+            }
+            else if (gardenHit.collider != null && gardenHit.collider.gameObject.TryGetComponent<Animal_MonoBehavior>(out Animal_MonoBehavior hitAnimal))
+            { //else if the hit object is a animal and the current selection is an animal
+                Debug.Log("Directing animal to another animal (possible mating) {SelectionManager}");
+                animal.interest = gardenHit.collider.gameObject;
+                animal.navMeshAgent.SetDestination(gardenHit.point);
+                animal.SetState(walkToPointState);
+                Deselect();
+                return true;
+            }
+            else
+            { //else if the hit object is not a plant or animal it is probably the ground so move the animal to the point
+                RaycastHit2D groundHit = RaycastForCollider(pos, groundLayer);
                 Debug.Log("Moving Animal to Point");
+                animal.interest = null;
                 //if hit collider hit something then set the animals destination to the hit point
                 if (groundHit.collider != null)
                 {
                     Debug.Log("Got here");
-                    _animal.navMeshAgent.SetDestination(groundHit.point);
+                    animal.navMeshAgent.SetDestination(groundHit.point);
                     //set the animal's state to walk to point
-                    _animal.SetState(walkToPointState);
+                    animal.SetState(walkToPointState);
                     Deselect();
                     return true;
                 }
                 return false;
             }
+
         }
+
 
         return false;
     }
