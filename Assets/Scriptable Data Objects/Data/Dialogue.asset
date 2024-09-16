@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2372aa485b9bc49955d58454958334, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  data:
+  - "Ah, welcome, traveler! Come in, come in! It's always good to see a new face
+    in my shop. I\u2019ve got a little bit of everything here \u2014 if you need
+    something, I\u2019m sure I\u2019ve got it somewhere!"
+  - "Take your time and look around. I\u2019ve gathered these goods from all over
+    the land \u2014 every item has its own story, and I\u2019d be happy to tell you
+    about any of them."
+  - "If you\u2019re not sure what you\u2019re looking for, I\u2019d be glad to help.
+    Maybe a fine weapon to defend yourself, or a potion to heal your wounds? Just
+    let me know, and I\u2019ll point you in the right direction."
+  - "And remember, my friend, if you don\u2019t see what you need today, I get new
+    stock all the time. Stop by again soon \u2014 I always enjoy a friendly chat!"

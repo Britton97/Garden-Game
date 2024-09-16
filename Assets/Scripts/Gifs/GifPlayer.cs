@@ -5,6 +5,7 @@ using Sirenix.Serialization;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class GifPlayer : MonoBehaviour
 {
@@ -17,7 +18,9 @@ public class GifPlayer : MonoBehaviour
     [SerializeField]
     [ReadOnly]
     private float queuedPlayTime = 0;
+    public bool playOnStart = false;
     public SpriteRenderer spriteRenderer;
+    public Image image;
     [SerializeField] private bool gifSpriteExpanded = false;
     private Coroutine gifCoroutine;
 
@@ -31,6 +34,15 @@ public class GifPlayer : MonoBehaviour
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
         }
+        else
+        {
+            image = GetComponent<Image>();
+        }
+
+        if (playOnStart)
+        {
+            PlayGif(currentGif.gifName);
+        }
     }
 
     public void PlayGif(string gifName)
@@ -43,6 +55,7 @@ public class GifPlayer : MonoBehaviour
 
     public void PlayGif(string gifName, float time)
     {
+        Debug.Log("Playing Gif: " + gifName + " for time: " + time);
         if (SetGif(gifName, true, time))
         {
             PlayGifForTime(time);
@@ -105,7 +118,7 @@ public class GifPlayer : MonoBehaviour
         if (queuedGif != null)
         {
             currentGif = queuedGif;
-            if(queuedGifHasPlayTime)
+            if (queuedGifHasPlayTime)
             {
                 PlayGifForTime(queuedPlayTime);
                 queuedGifHasPlayTime = false;
@@ -176,7 +189,16 @@ public class GifPlayer : MonoBehaviour
         {
             if (currentGif == null) break;
             //Debug.Log("Playing Gif on index: " + index);
-            spriteRenderer.sprite = currentGif.gifSprites[index];
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.sprite = currentGif.gifSprites[index];
+            }
+            else if (image != null)
+            {
+                //Debug.Log("Playing Gif on index: " + index);
+                image.sprite = currentGif.gifSprites[index];
+            }
+            //spriteRenderer.sprite = currentGif.gifSprites[index];
             if (index < currentGif.gifSprites.Count - 1)
             {
                 index++;

@@ -311,6 +311,15 @@ public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDi
     {
         //if the last mate time is greater than animalso.mateCooldown then return true
         // and all the romance requirements are filled
+        //foreach through each of the romance requirements and check the current quantity
+        foreach (AnimalChecklist requirement in localRomanceRequirements)
+        {
+            if (requirement.currentQuantity < requirement.itemRequirement.requiredQuantity)
+            {
+                return false;
+            }
+        }
+
         if (Time.time - lastMateTime > animalObject.mateCooldown && localRomanceRequirements.TrueForAll(x => x.isMet))
         {
             return true;
@@ -335,6 +344,13 @@ public class Animal_MonoBehavior : GardenObject_MonoBehavior, iRequirements, iDi
         Animal_MonoBehavior newAnimalMonoBehavior = newAnimal.GetComponent<Animal_MonoBehavior>();
         newAnimalMonoBehavior.isTamed = true;
         newAnimalMonoBehavior._GifPlayer.PlayGif("Happy", 3f);
+
+        //then reset the romance requirements
+        foreach (AnimalChecklist requirement in animal1.localRomanceRequirements)
+        {
+            requirement.currentQuantity = 0;
+            requirement.isMet = false;
+        }
     }
 
     #endregion

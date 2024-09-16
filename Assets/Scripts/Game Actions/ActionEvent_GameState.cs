@@ -44,6 +44,11 @@ public class ActionEvent_GameState : SerializedMonoBehaviour
     {
         gameAction.SwitchGameStates(GameState.Dossier);
     }
+    [Button("Switch State to Dialogue")]
+    public void SwitchStateToDialogue()
+    {
+        gameAction.SwitchGameStates(GameState.Dialogue);
+    }
     public UnityEvent<GameState> enterEvent;
     public UnityEvent<GameState> actionEvent;
     public UnityEvent<GameState> exitEvent;

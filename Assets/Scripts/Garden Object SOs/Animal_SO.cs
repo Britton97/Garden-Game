@@ -273,6 +273,15 @@ public class AnimalChecklist // animal requirements use ItemRequirement_Abs
                     else
                     {
                         count = itemRequirement.GetCount();
+                        _currentQuantity = count;
+                        if (count >= requiredQuantity)
+                        {
+                            isMet = true;
+                        }
+                        else
+                        {
+                            isMet = false;
+                        }
                     }
                 }
                 return count; // Add return statement for count

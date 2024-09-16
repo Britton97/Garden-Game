@@ -12,6 +12,7 @@ public enum GameState
     Pause,
     Watering,
     Dossier,
+    Dialogue,
     End
 }
 [CreateAssetMenu]
