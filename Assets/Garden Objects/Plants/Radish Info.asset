@@ -100,10 +100,12 @@ MonoBehaviour:
   growthTime: 60
   rotTime: 120
   waterDrainRate: 45
-  maxWaterFillValue: 1
   cost: 9
   sellPrice: 14
   hungerFillValue: 500
+  growthType: 1
+  startScale: {x: 0, y: 0, z: 0}
+  endScale: {x: 0, y: 0, z: 0}
   fullyGrownSprite: {fileID: 4437813026912723317, guid: 8166b57cb55198f4593b346f41c45399, type: 3}
   alreadyGrownOnce: 0
   firstTimeGrowingExperience: 10

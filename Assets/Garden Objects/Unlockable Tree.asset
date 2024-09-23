@@ -247,6 +247,7 @@ MonoBehaviour:
   alwaysUnlocked:
   - {fileID: 11400000, guid: 0ebd7dc7531608f4690790e0bdf5db14, type: 2}
   - {fileID: 11400000, guid: e7a2476a0601d42459026957893b485a, type: 2}
+  - {fileID: 11400000, guid: 6f8dffb1797da2447aa1b26f34056dc6, type: 2}
   playerLevels:
   - level: 0
     experienceRequired: 30

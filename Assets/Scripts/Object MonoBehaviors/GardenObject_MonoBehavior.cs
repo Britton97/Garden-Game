@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(Collider2D))]
+//[RequireComponent(typeof(Collider2D))]
 //[RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Animator))]
 //where T is the garden object scriptable object

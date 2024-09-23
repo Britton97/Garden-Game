@@ -20,7 +20,13 @@ public class Plant_SO : GardenObject_SO, iFirstTimeTame
     public float cost;
     public float sellPrice;
     public float hungerFillValue;
+    public GrowthType growthType;
+    [ShowIf("growthType", GrowthType.SpriteSheet)]
     public Dictionary<float, Sprite> growthSpriteDict = new Dictionary<float, Sprite>();
+    [ShowIf("growthType", GrowthType.Scale)]
+    public Vector3 startScale;
+    [ShowIf("growthType", GrowthType.Scale)]
+    public Vector3 endScale;
     public Sprite fullyGrownSprite;
 
     public bool alreadyGrownOnce = false;
@@ -70,3 +76,9 @@ public class Plant_SO : GardenObject_SO, iFirstTimeTame
         alreadyGrownOnce = false;
     }
 }
+
+public enum GrowthType
+{
+    Scale,
+    SpriteSheet
+} 

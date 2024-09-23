@@ -29,14 +29,7 @@ public class PlantState_GrowthComplete : PlantStateBoolCondition_Abstract
             //Debug.Log("Need Water");
             gardenObject_ctx._GifPlayer.PlayGif("Need Water");
         }
-        /*
-        if(gardenObject_ctx.waterProgress >= .95 && gardenObject_ctx._GifPlayer.GetGifName() != "Happy")
-        {
-            Debug.Log("Happy");
-            gardenObject_ctx._GifPlayer.PlayGif("Happy", 2f);
 
-        }
-        */
 
         if (gardenObject_ctx.growthProgress >= 1f)
         {
@@ -44,7 +37,7 @@ public class PlantState_GrowthComplete : PlantStateBoolCondition_Abstract
             return true;
         }
 
-        if (gardenObject_ctx.plantObject.CheckForGrowthChange(gardenObject_ctx.growthProgress, gardenObject_ctx.lastProgressUpdate))
+        if (gardenObject_ctx.plantObject.growthType == GrowthType.SpriteSheet && gardenObject_ctx.plantObject.CheckForGrowthChange(gardenObject_ctx.growthProgress, gardenObject_ctx.lastProgressUpdate))
         {
             //Debug.Log("Growth Change");
             gardenObject_ctx.lastProgressUpdate = gardenObject_ctx.growthProgress;
@@ -57,6 +50,11 @@ public class PlantState_GrowthComplete : PlantStateBoolCondition_Abstract
             }
             gardenObject_ctx._spriteRenderer.sprite = gardenObject_ctx.plantObject.GetSprite(gardenObject_ctx.growthProgress);
             gardenObject_ctx.shadowRenderer.sprite = gardenObject_ctx.plantObject.GetSprite(gardenObject_ctx.growthProgress);
+        }
+        else if(gardenObject_ctx.plantObject.growthType == GrowthType.Scale)
+        {
+            gardenObject_ctx._spriteRenderer.transform.localScale = Vector3.Lerp(gardenObject_ctx.plantObject.startScale, gardenObject_ctx.plantObject.endScale, gardenObject_ctx.growthProgress);
+            //gardenObject_ctx.shadowRenderer.transform.localScale = Vector3.Lerp(gardenObject_ctx.plantObject.startScale, gardenObject_ctx.plantObject.endScale, gardenObject_ctx.growthProgress);
         }
         return false;
     }

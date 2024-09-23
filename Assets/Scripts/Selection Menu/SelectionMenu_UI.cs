@@ -40,7 +40,7 @@ public class SelectionMenu_UI : MonoBehaviour
     {
         nameText.text = item.GetName();
         objectSprite.sprite = item.GetSprite();
-        objectSprite.SetNativeSize();
+        //objectSprite.SetNativeSize();
     }
 
     public void CheckIfSellable(GameObject obj)

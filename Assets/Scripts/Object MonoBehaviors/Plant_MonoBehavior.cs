@@ -172,13 +172,15 @@ public class Plant_MonoBehavior : GardenObject_MonoBehavior, iPickupable, iWater
 
     public void JumpTween()
     {
+        startJumpValue = _spriteRenderer.gameObject.transform.localPosition.y;
         jumpTween.Tween();
         finishedGrowingEvent.Invoke();
     }
+    private float startJumpValue;
 
     public void JumpTweenReceiveValue(float value)
     {
-        _spriteRenderer.gameObject.transform.localPosition = new Vector3(_spriteRenderer.gameObject.transform.localPosition.x, value, _spriteRenderer.gameObject.transform.localPosition.z);
+        _spriteRenderer.gameObject.transform.localPosition = new Vector3(_spriteRenderer.gameObject.transform.localPosition.x, startJumpValue + value, _spriteRenderer.gameObject.transform.localPosition.z);
     }
     #endregion
 }

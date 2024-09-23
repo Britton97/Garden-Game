@@ -10,15 +10,36 @@ public class GrowingState : BaseState_Plant
     public override void EnterState(Plant_MonoBehavior gardenObject_ctx)
     {
         gardenObject_ctx.SetPlantState(PlantState.Seed);
-        gardenObject_ctx._spriteRenderer.sprite = gardenObject_ctx.plantObject.GetSprite(0);
-        gardenObject_ctx.shadowRenderer.sprite = gardenObject_ctx.plantObject.GetSprite(0);
+
+        if(gardenObject_ctx.plantObject.growthType == GrowthType.SpriteSheet)
+        {
+            gardenObject_ctx._spriteRenderer.sprite = gardenObject_ctx.plantObject.GetSprite(0);
+            gardenObject_ctx.shadowRenderer.sprite = gardenObject_ctx.plantObject.GetSprite(0);
+        }
+        else
+        {
+            gardenObject_ctx._spriteRenderer.transform.localScale = gardenObject_ctx.plantObject.startScale;
+            //gardenObject_ctx.shadowRenderer.transform.localScale = gardenObject_ctx.plantObject.startScale;
+        }
+        //gardenObject_ctx._spriteRenderer.sprite = gardenObject_ctx.plantObject.GetSprite(0);
+        //gardenObject_ctx.shadowRenderer.sprite = gardenObject_ctx.plantObject.GetSprite(0);
         gardenObject_ctx.lastProgressUpdate = 0;
     }
 
     public override void ExitState(Plant_MonoBehavior gardenObject_ctx)
     {
-        gardenObject_ctx._spriteRenderer.sprite = gardenObject_ctx.plantObject.fullyGrownSprite;
-        gardenObject_ctx.shadowRenderer.sprite = gardenObject_ctx.plantObject.fullyGrownSprite;
+        if(gardenObject_ctx.plantObject.growthType == GrowthType.SpriteSheet)
+        {
+            gardenObject_ctx._spriteRenderer.sprite = gardenObject_ctx.plantObject.fullyGrownSprite;
+            gardenObject_ctx.shadowRenderer.sprite = gardenObject_ctx.plantObject.fullyGrownSprite;
+        }
+        else
+        {
+            gardenObject_ctx._spriteRenderer.transform.localScale = gardenObject_ctx.plantObject.endScale;
+            //gardenObject_ctx.shadowRenderer.transform.localScale = gardenObject_ctx.plantObject.endScale;
+        }
+        //gardenObject_ctx._spriteRenderer.sprite = gardenObject_ctx.plantObject.fullyGrownSprite;
+        //gardenObject_ctx.shadowRenderer.sprite = gardenObject_ctx.plantObject.fullyGrownSprite;
         gardenObject_ctx.lastProgressUpdate = 1;
         gardenObject_ctx.growthProgress = 1;
     }
